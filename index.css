@@ -1,0 +1,238 @@
+/********************************************************************** Brand | Settings | Start **********************************************************************/
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+:root {
+    
+    --background: White;
+    --color: rgb(10, 10, 10);
+
+    --accent: rgb(150, 150, 150);
+
+}
+
+/********************************************************************** Brand | Settings | End **********************************************************************/
+
+/********************************************************************** Brand | Header | Start **********************************************************************/
+
+.Header {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    background: var(--background);
+    box-shadow: 0 0 10px 0 var(--accent);
+    
+    position: fixed;
+    z-index: 1;
+
+}
+
+.Branding h1 a {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+    font-weight: 500;
+
+    color: var(--color);
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+.Nav {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Nav ul {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    row-gap: 10px;
+    column-gap: 10px;
+
+    list-style: none;
+
+}
+
+.Nav li a {
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: var(--accent);
+
+    text-decoration: none;
+    cursor: pointer;
+
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+
+    transition: 250ms ease-in-out;
+
+}
+
+.Nav li a::after {
+
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--color);
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in-out;
+
+}
+
+.Nav li a:hover::after {
+
+    transform: scale(1);
+    transform-origin: left;
+
+}
+
+.Hamburger {
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 2.5px;
+    
+    cursor: pointer;
+
+}
+
+.bar {
+
+    width: 22.5px;
+    height: 2px;
+
+    border-radius: 1px;
+    background: var(--accent);
+
+}
+
+/********************************************************************** Brand | Header Media Queries | Start **********************************************************************/
+
+@media (max-width:2560px) {
+
+    /* SAME */
+
+}
+
+@media (max-width:1440px) {
+
+    /* SAME */
+
+}
+
+@media (max-width:1024px) {
+
+    /* SAME */
+
+}
+
+@media (max-width:768px) {
+
+    .Header {
+
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+    .Nav ul {
+
+        position: fixed;
+
+        margin-top: 19px;
+
+        background: var(--background);
+
+        width: 100%;
+        height: 100%;
+
+        transition: 0.25s ease;
+
+        top: 60px;
+        left: -100%;
+
+        flex-direction: column;
+        gap: 15px;
+        justify-content: left;
+        align-items: flex-start;
+
+        padding: 15px 0 0 15px;
+
+    }
+
+    .Hamburger {
+
+        display: flex;
+
+    }
+
+    .Nav ul.HeaderHamburgerActive {
+
+        left: 0%;
+
+    }
+
+}
+
+@media (max-width:425px) {
+
+    /* SAME */
+
+}
+
+@media (max-width:375px) {
+
+    /* SAME */
+
+}
+
+@media (max-width:320px) {
+
+    /* SAME */
+
+}
+
+/********************************************************************** Brand | Header Media Queries | End **********************************************************************/
+
+/********************************************************************** Brand | Header | End **********************************************************************/
